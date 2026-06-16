@@ -13,10 +13,17 @@ int main() {
     kv_put(table, "lala", "lama");
 
     
+    
 
     char *val = kv_get(table, "haha");
     char *val2 = kv_get(table, "lala");
     char *val3 = kv_get(table, "DNE");
+
+    printf("%s %s %s\n", val, val2, val3);
+
+    kv_delete(table, "haha");
+    val = NULL;
+    val = kv_get(table, "haha");
 
     printf("%s %s %s\n", val, val2, val3);
 }
