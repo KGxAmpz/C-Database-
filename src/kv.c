@@ -1,5 +1,6 @@
 #include <kv.h>
 #include <string.h>
+#include <stdio.h>
 
 // function hash
 //params
