@@ -22,8 +22,8 @@ size_t hash(char *val, int capacity) {
 // db : a pointer to the database
 // returns 0 on completion
 // or NULL if not found 
-int kv_free(kv_t *db) {
-    if (!db) return -1;
+void kv_free(kv_t *db) {
+    if (!db) return;
     for (int i = 0; i < db->capacity-1; i++) {
         kv_entry_t *e = &db->entries[i];
         
@@ -40,7 +40,7 @@ int kv_free(kv_t *db) {
     free(db->entries);
     free(db);
 
-    return 0;
+    return;
 }
 // function kv_delete
 // paramaters:
